@@ -18,3 +18,12 @@ def about():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+from flask import Flask
+from routes.web import web
+
+app = Flask(__name__)
+
+app.register_blueprint(web)
+
+if __name__ == '__main__':
+    app.run(debug=True)
