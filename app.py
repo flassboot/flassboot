@@ -4,7 +4,7 @@ from routes.web import web
 
 app = Flask(__name__)
 
-# Înregistrează blueprint-urile pentru bot și rutele web
+# Înregistrează blueprint-urile
 app.register_blueprint(bot_blue)
 app.register_blueprint(web)
 
