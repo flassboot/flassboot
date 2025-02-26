@@ -1,7 +1,7 @@
 from flask import Blueprint
 
-bot_blueprint = Blueprint('bot', __name__)
+bot_blue = Blueprint('bot', __name__)  # Corectat: Închide paranteza și schimbă numele
 
-@bot_blueprint.route('/bot')
+@bot_blue.route('/bot')
 def bot_home():
     return "FlaskBot API is running!"
