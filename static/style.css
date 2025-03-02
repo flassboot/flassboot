@@ -1,0 +1,143 @@
+
+/* style.css - Fișier CSS pentru FlassTradingBoot (Actualizat) */
+
+/* Setări generale */
+body {
+    background-color: #f0f4f8;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #34495e;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px;
+}
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Stiluri pentru formulare */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Tema întunecată */
+.dark-theme {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+.dark-theme .container {
+    background-color: #34495e;
+}
+.dark-theme button {
+    background-color: #1abc9c;
+}
+.dark-theme button:hover {
+    background-color: #16a085;
+}
+
+/* Bara de navigare */
+.navbar {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.navbar a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Mesaje de alertă */
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.alert-success {
+    background-color: #2ecc71;
+    color: #fff;
+}
+.alert-danger {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Animații */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Îmbunătățiri pentru butoane */
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
