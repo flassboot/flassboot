@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - FlassTradingBoot</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+    body {
+        background-color: #2c3e50; /* Culoare profesională (albastru închis) */
+        text-align: center;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+    }
+    input[type="email"], input[type="password"] {
+        width: 90%;
+        padding: 8px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #3498db; /* Buton albastru profesional */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #2980b9; /* Buton hover */
+    }
+</style>
+</head>
+<body>
+
+<div>
+    <img src="/static/your_image.png" alt="FlassTradingBoot Logo" style="width:200px; margin-top:20px;">
+</div>
+
+<div class="container">
+    <h2>Login to FlassTradingBoot</h2>
+    <form action="/login" method="POST">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="/register" style="color: #85c1e9;">Register here</a></p>
+
+    <h3>Forgot Password?</h3>
+    <form action="/reset_password" method="POST">
+        <label for="reset_email">Enter your email:</label><br>
+        <input type="email" id="reset_email" name="reset_email" required><br>
+        <button type="submit">Reset Password</button>
+    </form>
+</div>
+
+</body>
+</html>
