@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Referral System - FlassTradingBoot</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+    body {
+        background-color: #1e272e;
+        text-align: center;
+        color: #f5f6fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #2f3640;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    button {
+        background-color: #44bd32;
+        color: #fff;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 10px;
+    }
+    button:hover {
+        background-color: #4cd137;
+    }
+    h1, h2, h3 {
+        color: #00a8ff;
+        margin-bottom: 20px;
+    }
+    a {
+        color: #00a8ff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    a:hover {
+        color: #0097e6;
+        text-decoration: underline;
+    }
+    .referral-box {
+        background-color: #353b48;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .referral-link {
+        background-color: #00a8ff;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .referral-link:hover {
+        background-color: #0097e6;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Referral System</h1>
+    <h3>Invite your friends and get rewards!</h3>
+
+    <div class="referral-box">
+        <h3>Your Referral Code:</h3>
+        <p><strong>{{ referral_code }}</strong></p>
+
+        <h3>Your Referral Link:</h3>
+        <div class="referral-link" onclick="navigator.clipboard.writeText('{{ referral_link }}')">
+            {{ referral_link }} (click to copy)
+        </div>
+
+        <h3>Total Invites: <strong>{{ referral_count }}</strong></h3>
+        <p>Invite 5 friends and get 1 month free!</p>
+    </div>
+
+    <h3>Invite a Friend</h3>
+    <form action="/send-invite" method="POST">
+        <input type="email" name="friend_email" placeholder="Enter your friend's email" required style="padding: 5px; border-radius: 5px; border: none; margin-bottom: 10px;">
+        <button type="submit">Send Invite</button>
+    </form>
+
+    <h3>Need Help?</h3>
+    <button onclick="location.href='/help'">Help</button>
+
+    <br><br>
+    <button onclick="location.href='/dashboard'">Back to Dashboard</button>
+</div>
+
+</body>
+</html>
