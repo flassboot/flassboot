@@ -1,0 +1,111 @@
+
+/* style.css - Fișier CSS pentru FlassTradingBoot */
+
+/* Setări generale */
+body {
+    background-color: #f0f4f8;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #34495e;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Stiluri pentru formulare */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Tema întunecată */
+.dark-theme {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+.dark-theme .container {
+    background-color: #34495e;
+}
+.dark-theme button {
+    background-color: #1abc9c;
+}
+.dark-theme button:hover {
+    background-color: #16a085;
+}
+
+/* Bara de navigare */
+.navbar {
+    background-color: #3498db;
+    padding: 10px;
+    text-align: center;
+}
+.navbar a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.navbar a:hover {
+    background-color: #2980b9;
+}
+
+/* Mesaje de alertă */
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.alert-success {
+    background-color: #2ecc71;
+    color: #fff;
+}
+.alert-danger {
+    background-color: #e74c3c;
+    color: #fff;
+}
