@@ -11,3 +11,4 @@ gunicorn==20.1.0
 websocket-client==1.5.1
 uvicorn==0.20.0
 fastapi==0.95.0
+paypal-checkout-serversdk==1.0.3
