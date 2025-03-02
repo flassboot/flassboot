@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe - FlassTradingBoot</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+    body {
+        background-color: #f0f4f8; /* Fundal deschis și profesional */
+        text-align: center;
+        color: #2c3e50; /* Text albastru închis */
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"], input[type="email"], input[type="radio"] {
+        margin: 10px 0;
+    }
+    button {
+        background-color: #3498db; /* Albastru profesional */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #2980b9; /* Albastru închis la hover */
+    }
+    h2, h3 {
+        color: #34495e;
+    }
+    label {
+        color: #2c3e50;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Subscribe to FlassTradingBoot</h2>
+    <form action="/subscribe" method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <h3>Select Plan:</h3>
+        <input type="radio" id="basic" name="plan" value="basic" checked>
+        <label for="basic">Basic - $19.99/month</label><br>
+
+        <input type="radio" id="pro" name="plan" value="pro">
+        <label for="pro">Pro - $49.99/month (Advanced Features)</label><br>
+
+        <input type="radio" id="premium" name="plan" value="premium">
+        <label for="premium">Premium - $99.99/month (All Features + Priority Support)</label><br>
+
+        <input type="radio" id="invite" name="plan" value="invite">
+        <label for="invite">Invite 5 Friends - Get 1 Month Free</label><br>
+
+        <h3>Payment Method:</h3>
+        <input type="radio" id="stripe" name="payment_method" value="stripe" checked>
+        <label for="stripe">Credit Card (Stripe)</label><br>
+
+        <input type="radio" id="paypal" name="payment_method" value="paypal">
+        <label for="paypal">PayPal</label><br>
+
+        <input type="radio" id="coinbase" name="payment_method" value="coinbase">
+        <label for="coinbase">Cryptocurrency (Coinbase)</label><br>
+
+        <button type="submit">Subscribe Now</button>
+    </form>
+
+    <p><strong>Referral Program:</strong> Invite 5 friends and get 1 month free! Share your unique referral code from the dashboard.</p>
+</div>
+
+</body>
+</html>
